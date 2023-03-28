@@ -13,7 +13,7 @@ public class Main {
         System.out.printf("Coordindates of Figure1 changed on: %s\n",Figure1.toString());//check coordinates
         
         ChessBoard Figure2 = new ChessBoard(3,2);
-        System.out.printf("Create Figure2 with coordinates: %s\n",Figure2.toString());//create Figure1 with coordinates d5
+        System.out.printf("Create Figure2 with coordinates: %s\n",Figure2.toString());//create Figure1 with coordinates d3
         try {//try change coordinates to invalid
             Figure2.setX(9);
             Figure2.setY(-1);
