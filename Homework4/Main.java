@@ -6,11 +6,11 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader ReadFile = null;
-        try {//file read initialization
-            if (args.length == 0) {
+        try {
+            if (args.length == 0) {//check there is file's path
                 throw new IllegalArgumentException("");
             }
-            ReadFile = new BufferedReader(new FileReader(args[0]));
+            ReadFile = new BufferedReader(new FileReader(args[0]));//file read initialization
             String str;
             int kol = 0;
             while ((str = ReadFile.readLine()) != null) {//reading a file line by line
