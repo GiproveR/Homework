@@ -1,0 +1,58 @@
+{
+  "seller_has_product": [
+    {
+      "id_product": "0000",
+      "id_seller": "1000",
+      "cost": 100,
+      "quantity": 200
+    },
+    {
+      "id_product": "0000",
+      "id_seller": "1001",
+      "cost": 100,
+      "quantity": 300
+    },
+    {
+      "id_product": "0000",
+      "id_seller": "1002",
+      "cost": 100,
+      "quantity": 2157
+    },
+    {
+      "id_product": "0001",
+      "id_seller": "1000",
+      "cost": 50,
+      "quantity": 25671
+    },
+    {
+      "id_product": "0001",
+      "id_seller": "1001",
+      "cost": 50,
+      "quantity": 350
+    },
+    {
+      "id_product": "0001",
+      "id_seller": "1002",
+      "cost": 50,
+      "quantity": 460
+    },
+    {
+      "id_product": "0002",
+      "id_seller": "1000",
+      "cost": 70,
+      "quantity": 100
+    },
+    {
+      "id_product": "0002",
+      "id_seller": "1001",
+      "cost": 70,
+      "quantity": 964
+    },
+    {
+      "id_product": "0002",
+      "id_seller": "1002",
+      "cost": 70,
+      "quantity": 450
+    }
+  ]
+}

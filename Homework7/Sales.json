@@ -1,0 +1,67 @@
+{
+  "sales": [
+    {
+      "id_sale": "2000",
+      "id_product": "0000",
+      "id_seller": "1000",
+      "quantity_sales": 200,
+      "date": "2023-04-24"
+    },
+    {
+      "id_sale": "2001",
+      "id_product": "0000",
+      "id_seller": "1001",
+      "quantity_sales": 300,
+      "date": "2023-04-24"
+    },
+    {
+      "id_sale": "2002",
+      "id_product": "0000",
+      "id_seller": "1002",
+      "quantity_sales": 2157,
+      "date": "2023-04-25"
+    },
+    {
+      "id_sale": "2003",
+      "id_product": "0001",
+      "id_seller": "1000",
+      "quantity_sales": 25671,
+      "date": "2023-04-24"
+    },
+    {
+      "id_sale": "2004",
+      "id_product": "0001",
+      "id_seller": "1001",
+      "quantity_sales": 350,
+      "date": "2023-04-26"
+    },
+    {
+      "id_sale": "2005",
+      "id_product": "0001",
+      "id_seller": "1002",
+      "quantity_sales": 460,
+      "date": "2023-04-24"
+    },
+    {
+      "id_sale": "2006",
+      "id_product": "0002",
+      "id_seller": "1000",
+      "quantity_sales": 100,
+      "date": "2023-04-28"
+    },
+    {
+      "id_sale": "2007",
+      "id_product": "0002",
+      "id_seller": "1001",
+      "quantity_sales": 964,
+      "date": "2023-04-27"
+    },
+    {
+      "id_sale": "2008",
+      "id_product": "0002",
+      "id_seller": "1002",
+      "quantity_sales": 450,
+      "date": "2023-04-24"
+    }
+  ]
+}

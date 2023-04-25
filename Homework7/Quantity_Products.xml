@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<store>
+    <seller>
+        <FirstName>Peter</FirstName>
+        <SecondName>Parker</SecondName>
+        <NameProduct>Apple</NameProduct>
+        <QuantityProduct>2157</QuantityProduct>
+    </seller>
+    <seller>
+        <FirstName>Harry</FirstName>
+        <SecondName>Potter</SecondName>
+        <NameProduct>Pineapple</NameProduct>
+        <QuantityProduct>25671</QuantityProduct>
+    </seller>
+    <seller>
+        <FirstName>Peter</FirstName>
+        <SecondName>Pen</SecondName>
+        <NameProduct>Pen</NameProduct>
+        <QuantityProduct>964</QuantityProduct>
+    </seller>
+</store>

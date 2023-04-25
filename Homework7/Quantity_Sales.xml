@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Shop>
+    <sales>
+        <Date>2023-04-24</Date>
+        <QuantitySales>27081</QuantitySales>
+    </sales>
+    <sales>
+        <Date>2023-04-25</Date>
+        <QuantitySales>2157</QuantitySales>
+    </sales>
+    <sales>
+        <Date>2023-04-26</Date>
+        <QuantitySales>350</QuantitySales>
+    </sales>
+    <sales>
+        <Date>2023-04-28</Date>
+        <QuantitySales>100</QuantitySales>
+    </sales>
+    <sales>
+        <Date>2023-04-27</Date>
+        <QuantitySales>964</QuantitySales>
+    </sales>
+</Shop>

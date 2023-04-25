@@ -1,0 +1,19 @@
+{
+  "sellers": [
+    {
+      "id": "1000",
+      "First_name": "Harry",
+      "Second_name": "Potter"
+    },
+    {
+      "id": "1001",
+      "First_name": "Peter",
+      "Second_name": "Pen"
+    },
+    {
+      "id": "1002",
+      "First_name": "Peter",
+      "Second_name": "Parker"
+    }
+  ]
+}
