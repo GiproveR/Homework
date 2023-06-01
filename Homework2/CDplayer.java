@@ -1,7 +1,7 @@
 public class CDplayer extends Device {
     
     @Override
-    public boolean compatible(Storage NewSongs) {//checks, that this CD playye can use the storage
+    public boolean compatible(Storage NewSongs) {//проверка, что CD-проигрыватель может использовать хранилище с музыкой
         if (NewSongs instanceof CD) {
             return true;
         }
@@ -11,11 +11,11 @@ public class CDplayer extends Device {
     }
     
     @Override
-    public void insertStorage(Storage NewSongs) {//connecting device and storage
-        if (this.compatible(NewSongs)) {
+    public void insertStorage(Storage NewSongs) {//подсоединение хранилища
+        if (this.compatible(NewSongs)) { //проверка на совместимость
             super.insertStorage(NewSongs);
         }
-        else {
+        else { //в случае несовместимости, вывод соответсвующего сообщения
             System.out.print("This storage cannot be connected to this playback device.\n");
         }
     }
