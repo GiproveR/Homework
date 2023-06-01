@@ -1,7 +1,7 @@
 public class VinylPlayer extends Device{
     
     @Override
-    public boolean compatible(Storage NewSongs) {//checks, that this Vinyl Player can use the storage
+    public boolean compatible(Storage NewSongs) {//проверка, что виниловый проигрыватель может использовать хранилище
         if (NewSongs instanceof VinylRecord) {
             return true;
         }
@@ -11,11 +11,11 @@ public class VinylPlayer extends Device{
     }
     
     @Override
-    public void insertStorage(Storage NewSongs) {//connecting device and storage
-        if (this.compatible(NewSongs)) {
+    public void insertStorage(Storage NewSongs) {//подсоединение хранилища с музыкой
+        if (this.compatible(NewSongs)) {//если совместим, то подключаем
             super.insertStorage(NewSongs);
         }
-        else {
+        else { //в случае несовместимости выводится соответствующее сообщение
             System.out.print("This storage cannot be connected to this playback device.\n");
         }
     }
