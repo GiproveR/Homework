@@ -1,17 +1,17 @@
 public class Device {
     
-    private int nomer;
-    private Storage Songs;
-    private boolean play;
+    private int nomer; //количество песен
+    private Storage Songs; //подсоединённый носитель с песнями
+    private boolean play; //переменная, отвечающая за проигрывание песни
     
-    Device() {//create device with default settings
+    Device() {//создание устройства с настройками по умолчанию
         this.nomer = 0;
         this.Songs = null;
         this.play = false;
     }
     
-    public void getInfo() {//displays information about the currently playing song
-        if (this.play & this.Songs!=null) {
+    public void getInfo() {//отображение информации о текущей воспроизводимой песне
+        if (this.play & this.Songs!=null) {//выполняется, если
             System.out.printf("%s: Now playing: %s\n",this.getClass().getCanonicalName(),this.Songs.getInfo(this.nomer));
         }
         else {
@@ -19,62 +19,63 @@ public class Device {
         }
     }
     
-    public void setNomer(int Nomer) throws ArrayIndexOutOfBoundsException{//set the song's number
-        if (this.Songs!=null & Nomer/Songs.getLength()<1 & Nomer>=0) {
+    public void setNomer(int Nomer) throws ArrayIndexOutOfBoundsException{//выбор песни для воспроизведения
+        if (this.Songs!=null & Nomer/Songs.getLength()<1 & Nomer>=0) {//если подключён носитель с песнями и песня с номером существует, песня выбирается
             this.nomer = Nomer;
             if (this.play) {
                 this.getInfo();
             }
         }
-        else {
+        else { //иначе пользователя просят выбрать существующую песню или вставить носитель с песнями
             throw new ArrayIndexOutOfBoundsException("Please, enter another song's number or insert the storage.\n");
         }
     }
     
-    public void getList() {//displays information about all songs
-        if (this.Songs!=null) {
+    public void getList() {//отображение информации обо всех песнях
+        if (this.Songs!=null) {//информация выводится, если подключён носитель с музыкальными композициями
             for (int i=0;i<this.Songs.getLength();i++) {
                 System.out.printf("%d. %s\n",i+1,this.Songs.getInfo(i));
             }
         }
-        else {
+        else { //если устройства с песнями нет, выводится соответсвующая ошибка
             System.out.print("Please, insert storage in the device.\n");
         }
     }
     
-    public void Play() {//start play music and get information about song
-        if (this.Songs!=null) {
+    public void Play() {//запуск воспроизведения музыки
+        if (this.Songs!=null) { //воспроизведение начинается, если подключён носитель с песнями
             this.play=true;
             this.getInfo();
         }
-        else {
+        else { //иначе выводится соответствующая ошибка
             System.out.print("Please, insert storage in the device.\n");
         }
     }
     
-    public void NoPlay() {//stop play music
+    public void NoPlay() {//остановка воспроизведения музыки
         this.play=false;
     }
     
-    public boolean compatible(Storage NewSongs) {//checks, that this device can use the storage
-        if (NewSongs instanceof Storage) {
+    public boolean compatible(Storage NewSongs) {//проверка совместимости воспроизводимого устройства и носителя с песнями
+        if (NewSongs instanceof Storage) { //если совместимы, возвращает true
             return true;
         }
-        else {
+        else { //иначе возвращается false
             return false;
         }
     }
     
-    public void insertStorage(Storage NewSongs) {//connecting device and storage
-        if (this.Songs!=null) {
+    public void insertStorage(Storage NewSongs) {//подключение хранилища песен
+        if (this.Songs!=null) { //если используется другой носитель, мы не можем подключить новый
             System.out.print("Please disable the storage in use first.\n");
         }
-        else {
+        else { //иначе подключается новое хранилище с песнями
             this.Songs = NewSongs;
         }
     }
     
-    public void disconnectStorage() {//disconnet storage from device
+    public void disconnectStorage() {//остановка воспроизведения музыки и отсоединение подключенного хранилища
+        this.play = false;
         this.Songs = null;
     }
 }
