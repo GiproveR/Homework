@@ -9,16 +9,7 @@ public class Device {
         this.Songs = null;
         this.play = false;
     }
-    
-    public void getInfo() {//отображение информации о текущей воспроизводимой песне
-        if (this.play & this.Songs!=null) {//выполняется, если музыка воспроизводится и подключено хранилище с песнями
-            System.out.printf("%s: Now playing: %s\n",this.getClass().getCanonicalName(),this.Songs.getInfo(this.nomer));
-        }
-        else { //иначе программа просит вставить носитель музыкальных композиций или включить воспроизведение
-            System.out.printf("The device is not or can't playing music for now.\n");
-        }
-    }
-    
+        
     public void setNomer(int Nomer) throws ArrayIndexOutOfBoundsException{//выбор песни для воспроизведения
         if (this.Songs!=null & Nomer/Songs.getLength()<1 & Nomer>=0) {//если подключён носитель с песнями и песня с номером существует, песня выбирается
             this.nomer = Nomer;
@@ -28,6 +19,15 @@ public class Device {
         }
         else { //иначе пользователя просят выбрать существующую песню или вставить носитель с песнями
             throw new ArrayIndexOutOfBoundsException("Please, enter another song's number or insert the storage.\n");
+        }
+    }
+    
+    public void getInfo() {//отображение информации о текущей воспроизводимой песне
+        if (this.play & this.Songs!=null) {//выполняется, если музыка воспроизводится и подключено хранилище с песнями
+            System.out.printf("%s: Now playing: %s\n",this.getClass().getCanonicalName(),this.Songs.getInfo(this.nomer));
+        }
+        else { //иначе программа просит вставить носитель музыкальных композиций или включить воспроизведение
+            System.out.printf("The device is not or can't playing music for now.\n");
         }
     }
     
