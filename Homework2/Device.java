@@ -1,6 +1,6 @@
 public class Device {
     
-    private int nomer; //количество песен
+    private int nomer; //номер текущей проигрываемой песни
     private Storage Songs; //подсоединённый носитель с песнями
     private boolean play; //переменная, отвечающая за проигрывание песни
     
@@ -11,10 +11,10 @@ public class Device {
     }
     
     public void getInfo() {//отображение информации о текущей воспроизводимой песне
-        if (this.play & this.Songs!=null) {//выполняется, если
+        if (this.play & this.Songs!=null) {//выполняется, если музыка воспроизводится и подключено хранилище с песнями
             System.out.printf("%s: Now playing: %s\n",this.getClass().getCanonicalName(),this.Songs.getInfo(this.nomer));
         }
-        else {
+        else { //иначе программа просит вставить носитель музыкальных композиций или включить воспроизведение
             System.out.printf("The device is not or can't playing music for now.\n");
         }
     }
@@ -22,7 +22,7 @@ public class Device {
     public void setNomer(int Nomer) throws ArrayIndexOutOfBoundsException{//выбор песни для воспроизведения
         if (this.Songs!=null & Nomer/Songs.getLength()<1 & Nomer>=0) {//если подключён носитель с песнями и песня с номером существует, песня выбирается
             this.nomer = Nomer;
-            if (this.play) {
+            if (this.play) { //если включено воспроизведение песен, так же выводится информация о выбранной песне
                 this.getInfo();
             }
         }
@@ -45,7 +45,7 @@ public class Device {
     public void Play() {//запуск воспроизведения музыки
         if (this.Songs!=null) { //воспроизведение начинается, если подключён носитель с песнями
             this.play=true;
-            this.getInfo();
+            this.getInfo(); //выводится информация обо всех доступных песнях
         }
         else { //иначе выводится соответствующая ошибка
             System.out.print("Please, insert storage in the device.\n");
@@ -75,7 +75,7 @@ public class Device {
     }
     
     public void disconnectStorage() {//остановка воспроизведения музыки и отсоединение подключенного хранилища
-        this.play = false;
-        this.Songs = null;
+        this.play = false; //остановка воспроизведения
+        this.Songs = null; //отключение устройства
     }
 }
