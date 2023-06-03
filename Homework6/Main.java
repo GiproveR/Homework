@@ -25,7 +25,7 @@ public class Main {
     /**
      * Переменная для подсчёта количества искомого символа
      */
-    public static int sum;
+    public static AtomicInteger sum = new AtomicInteger(0);
 
     /**
      * Счётчик для отслеживания проверки всех символов
@@ -40,14 +40,13 @@ public class Main {
      */
     public static void main(String[] args){
         try {
-            sum = 0;
             long current = System.currentTimeMillis();
 
             ExecutorService executorService = Executors.newFixedThreadPool(50);//создание пула потоков с ограничением в 50
             IntStream.rangeClosed(0, INPUT_STRING.length()).forEach(z -> {//перебор индексов строки от 0 до INPUT_STRING.length()-1
                 executorService.submit(() -> {//вызов задачи в поток
                     if (Matcher.match(String.valueOf(INPUT_STRING.charAt(z)), TEMPLATE)) {//проверка символа
-                        sum++;
+                        sum.getAndAdd(1);
                     }
                     AllChecked.countDown();//снижение счётчика
                 });
